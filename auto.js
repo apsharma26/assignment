@@ -1,12 +1,12 @@
 var async = require('async');
 async.auto({
     getName: function (callback) {
-        var name = "Shiv";
+        var name = "Arun";
         callback(null, name);
     },
     getAge: function (callback) {
-        var age = 23;
-        callback(null, age);
+        var age = 21;
+        callback(null, age); 
     },
     getDetail: ['getName', 'getAge', function (result, callback) {
         var gender = "male"
@@ -14,7 +14,7 @@ async.auto({
         callback(null, detail);
     }],
 
-}, function (err, results) {
+}, function (err,result) {
     console.log('err = ', err);
     console.log('results = ', results);
 });
